@@ -1,0 +1,736 @@
+/*----- Typography --------------------------------------------------------------------- */
+@font-face {
+    font-family: "ReplicaLight";
+    src: url("../fonts/ReplicaStdLight.otf");
+}
+
+@font-face {
+    font-family: "Replica";
+    src: url("../fonts/ReplicaStdRegular.otf");
+}
+
+@font-face {
+    font-family: "ReplicaBold";
+    src: url("../fonts/ReplicaStdBold.otf");
+}
+
+body {
+    font-family: "Replica";
+    font-size: 17px;
+    color: #0c2736;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    overflow-x:hidden;
+}
+
+a,
+a:hover {
+    color: #0c2736;
+}
+
+h1,h2,h3,h5 {
+    font-family: "ReplicaBold";
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-family: "ReplicaBold";
+    font-size: 19px;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+}
+
+/*----- Colours --------------------------------------------------------------------- */
+
+.bg-green {
+    background-color: #b3d7c2;
+}
+
+.bg-yellow {
+    background-color: #f3c72d;
+}
+
+.bg-beige {
+    background-color: #cec8bc;
+}
+
+.bg-blue {
+    background-color: #72b8bb;
+}
+
+.bg-red {
+    background-color: #d01621;
+}
+
+.bg-pink {
+    background-color: #e96057;
+}
+
+/*----- Header --------------------------------------------------------------------- */
+
+header {
+    padding: 10px 0;
+}
+
+.logo {
+    display: inline-block;
+    width: 230px;
+}
+
+/*----- Nav --------------------------------------------------------------------- */
+
+.navbar {
+    border: none;
+    background: none;
+    margin: 0;
+}
+
+.nav > li {
+    padding: 0 0 0 15px;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    background: #0c2736;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #72b8bb;
+}
+
+.navbar .navbar-toggle {
+    margin-top: 15px;
+}
+
+.navbar-collapse {
+    border: none;
+    padding: 0;
+}
+
+.navbar .nav {
+    width: 100%;
+}
+
+.navbar .navbar-nav > li > a {
+    padding: 15px 0 15px 15px;
+}
+
+/*-----Hero --------------------------------------------------------------------- */
+
+.hero {
+    background: #b9b9b9;
+}
+
+.hero .overlay {
+    position: relative;
+    padding: 15px;
+    margin: 30px 15px 0;
+}
+
+.hero .overlay .overlay__title {
+    font-family: "ReplicaLight";
+    line-height: 1;
+    text-align: left;
+    font-size: 24px;
+    text-transform: none;
+    margin: 0 0 5px;
+}
+
+/*----- News Marquee --------------------------------------------------------------------- */
+
+.marquee {
+    width: 100%;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: #72b8bb;
+}
+
+.marquee ul {
+    display: inline-block;
+    padding-left: 100%;
+    text-indent: 0;
+    animation: marquee 35s linear infinite;
+    color: #fff;
+    margin: 0;
+}
+
+.marquee ul li {
+    padding: 5px 20px;
+}
+
+.marquee ul li:before {
+    content: url("../img/slash-small.png");
+    position: relative;
+    top: 3px;
+    left: -20px;
+}
+
+@keyframes marquee {
+    from   { transform: translate(0, 0); }
+    to { transform: translate(-100%, 0); }
+}
+
+.marquee ul li  {
+    display: inline-block;
+}
+
+/*----- Main --------------------------------------------------------------------- */
+
+.intro {
+    position: relative;
+}
+
+.tile {
+    position: relative;
+    background-image: url("https://dummyimage.com/690x600/b9b9b9/fff&text=%20");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 0;
+    padding-top: 88.5%; /* Ensures the height of the div is equal to it's width */
+    margin-bottom: 30px;
+}
+
+.tile:hover > .opacity {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
+    background: rgba(0, 0 ,0, .75);
+    border: 1px solid rgba(255, 255, 255, .25);
+}
+
+.overlay__title {
+    font-size: 20px;
+    font-family: "ReplicaBold";
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    margin: 0;
+}
+
+.overlay__title.large {
+    font-size: 20px;
+}
+
+.overlay__title.left {
+    text-align: left;
+}
+
+.overlay__text {
+    font-family: "ReplicaLight";
+    font-size: 14px;
+    color: #fff;
+    margin: 0;
+}
+
+/*----- Sidebar --------------------------------------------------------------------- */
+
+.sidebar {
+    width: 100%;
+    padding: 15px;
+    background: #0c2736;
+}
+
+.sidebar .sidebar__map {
+    background-image: url("https://dummyimage.com/990x900/b9b9b9/fff&text=%20");
+    background-size: cover;
+    background-position: center;
+    display: block;
+    height: 300px;
+}
+
+.sidebar .profile * {
+    display: block;
+    font-family: "ReplicaBold";
+    color: #fff;
+}
+
+.sidebar .profile__name {
+    font-size: 26px;
+    line-height: 1;
+    margin: 0 0 5px;
+}
+
+.sidebar .profile__img {
+    max-width: 120px;
+    float: right;
+}
+
+.sidebar__btn {
+    display: block;
+    background: #cec8bc;
+    height: 60px;
+    padding: 0;
+    -webkit-transform: skew(-29deg);
+    transform: skew(-29deg);
+    margin: 15px 10px 0;
+}
+
+.sidebar__btn:hover {
+    background: #aba599;
+}
+
+.sidebar__btn:before {
+    content: "";
+    display: block;
+    background-image: url(../img/slash.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 30px;
+    -webkit-transform: skew(29deg);
+    transform: skew(29deg);
+    height: 100%;
+}
+
+.sidebar__btn > span {
+    color: #0c2736;
+    font-size: 20px;
+    font-family:"ReplicaBold";
+    text-transform: uppercase;
+    -webkit-transform: skew(29deg);
+    transform: skew(29deg);
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 19px;
+}
+
+.sidebar__nav {
+    padding: 20px;
+    background: #0c2736;
+    margin: 30px 0 0;
+}
+
+.sidebar__nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar__nav ul li {
+    font-family: "ReplicaBold"; 
+    font-size: 15px;
+    padding: 6px 10px;
+    color: #fff;
+    border-bottom: 2px solid rgba(255,255,255, 0.25);
+}
+
+.sidebar__nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar__nav ul li:last-of-type {
+    border: none;
+}
+
+.sidebar__nav ul li:hover,
+.sidebar__nav ul li.active {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.map-nav {
+    display: none;
+}
+
+/*----- Hall of Fame --------------------------------------------------------------------- */
+
+.hof .winner {
+    background: #e3e1dc;
+    margin: 0 0 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+.hof .winner:nth-of-type(odd) {
+    background: #f3f1ee;
+}
+
+.hof .winner img {
+    width: 100%;
+    max-width: 100px;
+    border-radius: 50%;
+    display: block;
+}
+
+.hof span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.hof .person span {
+    margin: 0 0 5px;
+}
+
+.hof h6 {
+    font-size: 18px;
+    font-family: "ReplicaBold";
+    margin: 10px 0 5px;
+}
+
+.hof .details span {
+    font-family: "ReplicaBold";
+    margin: 0 0 2px;
+    font-size: 14px;
+}
+
+.hof .details .dept {
+    margin: 15px 0 5px;
+}
+
+.hof .number {
+    position: relative;
+    font-family: "ReplicaBold";
+    font-size: 80px;
+    margin: 10px 0 0;
+    float: right;
+}
+
+.hof .number:before {
+    content: "";
+    display: inline-block;
+    background-image: url(../img/slash.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    background-size: 50px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -50px;
+    bottom: 6px;
+}
+
+/*----- Footer --------------------------------------------------------------------- */
+
+.footer {
+    padding: 30px 0;
+    background: #cec8bc;
+    border-bottom: 7px solid #d01621;
+}
+
+.footer__logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.footer__menu {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.footer h4 {
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+.footer__social-links ul {
+   padding: 0;
+   text-align: center;
+}
+
+.footer__social-links li {
+    display: inline-block;
+}
+
+.footer__social-links .fa {
+    display: block;
+    background: #0c2736;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 23px;
+    color: #cec8bc;
+}
+
+.footer__social-links .fa:hover {
+    text-decoration: none;
+    background: #273D4A;
+}
+
+.footer .sig {
+    text-align: center;
+    margin: 30px 0 0;
+    font-size: 14px;
+}
+
+/*----- Media Queries --------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 54px;
+        float: right;
+    }
+
+    h2 {
+        font-size: 44px;
+    }
+
+    h3 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .navbar .nav {
+        width: inherit;
+        float: right;
+        margin-top: 35px;
+    }
+
+    .navbar-default .navbar-nav > .active > a, 
+    .navbar-default .navbar-nav > .active > a:focus, 
+    .navbar-default .navbar-nav > .active > a:hover {
+        background: none;
+        color: #0c2736;
+    }
+
+    .navbar-default .navbar-nav > .active:before {
+        content: url("../img/slash-small.png");
+        position: absolute;
+        top: 5px;
+    }
+
+    .navbar .navbar-nav > li > a {
+        padding: 5px 0 5px 15px;
+        font-size: 17px;
+    }
+
+    .hero .overlay .overlay__title {
+        font-size: 26px;
+    }
+
+    .hero .overlay .overlay__text {
+        font-size: 16px;
+    }
+
+    .sidebar-container {
+        position: absolute; 
+        right: 0;
+    }
+
+    .overlay__title {
+        font-size: 12px;
+    }
+
+    .overlay__title.large {
+        font-size: 15px;
+    }
+
+    .footer h4 {
+        margin: 0 0 10px;
+    }
+
+    .footer__menu.last {
+        margin: 15px 0 0;
+    }
+
+     .map-nav {
+        display: block;
+        margin: 0 auto;
+        position: fixed;
+        z-index: 999;
+        top: 645px;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .map-nav li {
+        display: inline-block;
+    }
+
+    .map-nav li:hover {
+        cursor: pointer;
+    }
+
+    .map-nav li a {
+        font-family: "ReplicaBold";
+        font-size: 15px;
+        display: block;
+        text-align: center;
+        background: #d01621;
+        color: #fff;
+        border: 3px solid #d01621;
+        height: 35px;
+        width: 35px;
+        line-height: 30px;
+        border-radius: 50%;
+        margin: 0 2px;
+        -webkit-animation: none;
+        -moz-animation: none;
+        -ms-animation: none;
+        animation: none;
+    }
+
+    .map-nav li a.active ,
+    .map-nav li a:hover {
+        text-decoration: none;
+        background: #fff;
+        border: 3px solid #d01621;
+        color: #000;
+    }
+
+    .map-nav .map-tooltip {
+        transition: all 0.25s;
+        padding: 0;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .nav > li {
+        padding: 0 0 0 30px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h3 {
+        font-size: 29px;
+    }
+
+    .hero .overlay .overlay__title {
+        font-size: 28px;
+    }
+
+    .overlay__title.large {
+        font-size: 20px;
+    }
+
+    .footer h4 {
+        text-align: left;
+    }
+
+    .footer .footer__logo {
+        margin: 15px 0 0;
+    }
+
+    .footer .footer__menu {
+        text-align: left;
+    }
+
+    .footer .footer__social-links {
+        float: right;
+        clear: both;
+    }
+
+    .footer .footer__social-links ul {
+        text-align: left;
+    }
+
+    .footer .sig {
+        float: right;
+        margin: 20px 0 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+     h1 {
+        font-size: 90px;
+    }
+
+    .overlay__title {
+        font-size: 15px;
+    }
+
+    .hof .winner {
+        margin: 0 0 10px;
+    }
+
+    .hof .number {
+        font-size: 65px;
+    }
+
+    .hof .number:before {
+        background-size: 35px;
+        left: -35px;
+        bottom: 3px;
+    }
+
+    .footer .footer__menu.last {
+        margin: 30px 0 0;
+    }
+}
+
+/*----- Utility Classes --------------------------------------------------------------------- */
+
+.spacer {
+    padding: 30px 0;
+}
+
+.min-height {
+    min-height: 270px;
+}
+
+.img-center {
+    display: block;
+    margin: 0 auto;
+}
+
+.bg-img-hof {
+    background-image: url("https://dummyimage.com/1920x300/999999/fff&text=%20");
+    background-size: cover;
+    background-position: center;
+}
+
+.margin-top-15 {
+    margin-top: 15px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.text-white {
+    color: #fff;
+}
